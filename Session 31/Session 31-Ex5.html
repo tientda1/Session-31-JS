@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const employees = [
+        { id: 1, name: "John", age: 18, address: "New York" },
+        { id: 2, name: "Mike", age: 22, address: "Canada" },
+        { id: 3, name: "Linda", age: 19, address: "California" },
+        { id: 4, name: "Peter", age: 25, address: "London" },
+        { id: 5, name: "Tony", age: 17, address: "New York" },
+      ];
+
+      document.write("<h2>Danh sách nhân viên</h2>");
+      document.write('<table border="1" cellspacing="0" cellpadding="10">');
+      document.write(
+        "<tr><th>STT</th><th>NAME</th><th>AGE</th><th>ADDRESS</th></tr>"
+      );
+
+      employees.forEach((employee) => {
+        document.write(`<tr>
+        <td>${employee.id}</td>
+        <td>${employee.name}</td>
+        <td>${employee.age}</td>
+        <td>${employee.address}</td>
+    </tr>`);
+      });
+
+      document.write("</table>");
+    </script>
+  </body>
+</html>
